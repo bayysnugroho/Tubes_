@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1672486775 source:c:\users\acer\documents\tube_std\queue.cpp
+1672531097 source:c:\users\acer\documents\tube_std\queue.cpp
 	"queue.h"
 
-1672486819 c:\users\acer\documents\tube_std\queue.h
+1672530061 c:\users\acer\documents\tube_std\queue.h
 	<iostream>
 	<cstdlib>
 
@@ -12,4 +12,8 @@
 	"stack.h"
 
 1672486839 c:\users\acer\documents\tube_std\stack.h
+
+1672532881 source:c:\users\acer\documents\tube_std\main.cpp
+	"queue.h"
+	"stack.h"
 

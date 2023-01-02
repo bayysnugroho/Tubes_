@@ -2,12 +2,12 @@
 #include "stack.h"
 
 int main(){
-    Stack S1,S2,S3,S4,S5,S6;
+    Stack S1,S2,S3,S4,S5,S6,S7;
 	Queue Q;
 	infotype info;
 	int menu, jenis, i, N;
 	adr pObat;
-	int a = 5,b = 5,c = 5,d = 5,e = 5,f = 5;
+	int a = 5,b = 5,c = 5,d = 5,e = 5,f = 5, g = 5;
 
 	S1 = createStack();
 	S2 = createStack();
@@ -15,6 +15,7 @@ int main(){
 	S4 = createStack();
 	S5 = createStack();
 	S6 = createStack();
+	S7 = createStack();
 
 	createQueue(Q);
 	while(true){
@@ -60,6 +61,7 @@ int main(){
 				cout << "| 4. Obat Wajib Surat Dokter  |" << endl;
 				cout << "| 5. Obat Golongan Narkotika  |" << endl;
 				cout << "| 6. Obat Psikotropika        |" << endl;
+				cout << "| 7. Obat Herbal              |" << endl;
 				cout << "===============================" << endl;
 
 				while(true){
@@ -78,13 +80,13 @@ int main(){
 					push(S1,5);
 					pop(S1,1);
 					a = a-1;
-					info.prioritas = 2;
+					info.prioritas = 5;
 				}else if(jenis == 2){
 					info.obat = "Obat Bebas";
 					push(S2,5);
 					pop(S2,1);
 					b= b-1;
-					info.prioritas = 5;
+					info.prioritas = 4;
 				}else if(jenis == 3){
 					info.obat = "Obat Keras";
 					push(S3,5);
@@ -96,7 +98,7 @@ int main(){
 					push(S4,5);
 					pop(S4,1);
 					d = d - 1;
-					info.prioritas = 4;
+					info.prioritas = 2;
 				}else if(jenis == 5){
 					info.obat = "Obat Golongan Narkotika";
 					push(S5,5);
@@ -108,6 +110,12 @@ int main(){
 					push(S6,5);
 					pop(S6,1);
 					f = f - 1;
+					info.prioritas = 1;
+				}else if(jenis == 7){
+				    info.obat = "Obat Herbal";
+					push(S7,5);
+					pop(S7,1);
+					g = g - 1;
 					info.prioritas = 1;
 				}else{
 					cout<<"error"<<endl;
@@ -142,6 +150,7 @@ int main(){
             cout <<  "Obat Wajib Resep Dokter : " << d <<endl;
             cout <<  "Obat Golongan Narkotika : " << e <<endl;
             cout <<  "Obat Psikotropika       : " << f <<endl;
+            cout <<  "Obat Herbal             : " << g <<endl;
         }else{
 			cout << "[!] Menu Tidak Valid!" << endl;
 		}
@@ -154,5 +163,5 @@ int main(){
 	return 0;
 }
 
-// stack untuk mengurangi dan panggilan pasien jumlah Obat
+// stack untuk mengurangi dan panggilan pasien jumlah obat
 // queue untuk antrian obat

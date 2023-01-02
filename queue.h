@@ -5,6 +5,7 @@
 using namespace std;
 
 #define info(P) (P)->info
+
 #define next(P) (P)->next
 #define Head(Q) ((Q).Head)
 #define Tail(Q) ((Q).Tail)

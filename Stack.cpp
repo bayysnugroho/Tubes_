@@ -23,7 +23,7 @@ bool isFull(Stack S){
 Stack createStack(){
     Stack S;
 
-    S.Top = 0;
+    S.Top = -;
 
     return S;
 }
